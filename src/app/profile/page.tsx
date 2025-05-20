@@ -15,6 +15,7 @@ export default function ProfilePage() {
   useEffect(() => {
     const unsubscribe = onAuthStateChanged(auth, (firebaseUser) => {
       if (firebaseUser) {
+        firebaseUser.getIdToken().then((data) => console.log(data));
         setUser(firebaseUser);
         setLoading(false);
       } else {
@@ -47,7 +48,7 @@ export default function ProfilePage() {
         <p className="mb-2">
           <strong>Email:</strong> {user?.email}
         </p>
-        <p className="mb-6">
+        <p className="mb-6 ml-1">
           <strong>UID:</strong> {user?.uid}
         </p>
         <button

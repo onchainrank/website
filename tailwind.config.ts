@@ -4,26 +4,32 @@ module.exports = {
   theme: {
     extend: {
       colors: {
-        primary: {
-          DEFAULT: "#1D4ED8", // your brand blue
-          light: "#3B82F6",
-          dark: "#1E40AF",
-        },
+        // Canvas & surfaces
         background: {
-          DEFAULT: "#F9FAFB", // light page bg
-          dark: "#111827", // for dark auth pages
+          DEFAULT: "#c9eeff", // new page background
+          surface: "#e6f9ff", // very light tint for cards/sections
+          muted: "#f2fbff", // ultra-subtle for footers/forms
+        },
+        // (keep the rest of your colors as-is)
+        primary: {
+          DEFAULT: "#00af7f",
+          light: "#33c8a1",
+          dark: "#008367",
+        },
+        secondary: {
+          DEFAULT: "#134479",
+          light: "#4a6db8",
+          dark: "#0f3366",
         },
         text: {
-          DEFAULT: "#1F2937", // dark text
-          light: "#6B7280", // secondary text
-          dark: "#F9FAFB", // for dark pages
+          DEFAULT: "#111827",
+          secondary: "#4B5563",
+          inverse: "#FFFFFF",
         },
-      },
-      fontFamily: {
-        sans: ["Inter", "ui-sans-serif", "system-ui"],
-      },
-      borderRadius: {
-        DEFAULT: "0.5rem",
+        accent: {
+          DEFAULT: "#FFC857",
+          light: "#FFE8A1",
+        },
       },
     },
   },

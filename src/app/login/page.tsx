@@ -1,5 +1,5 @@
 "use client";
-
+import "../../../styles/globals.css";
 import { useState, FormEvent, useEffect } from "react";
 import { useRouter } from "next/navigation";
 import { auth } from "../../lib/firebase";
@@ -54,7 +54,7 @@ export default function LoginPage() {
   }
 
   return (
-    <div className="flex items-center justify-center min-h-screen bg-gray-900 text-white px-4">
+    <div className="flex items-center justify-center min-h-screen px-4">
       <div className="w-full max-w-md space-y-6">
         <h2 className="text-3xl font-bold text-center">Log In</h2>
         {error && <p className="text-red-400 text-center">{error}</p>}
@@ -62,7 +62,7 @@ export default function LoginPage() {
         <button
           onClick={handleGoogleSignIn}
           disabled={loading}
-          className="w-full flex items-center justify-center space-x-2 py-2 border border-gray-700 bg-gray-800 rounded-md hover:bg-gray-700 transition disabled:opacity-50"
+          className="w-full flex items-center justify-center space-x-2 py-2 border  rounded-md transition disabled:opacity-50"
         >
           {/* Google icon here */}
           <svg className="w-5 h-5" viewBox="0 0 533.5 544.3">
@@ -72,9 +72,9 @@ export default function LoginPage() {
         </button>
 
         <div className="flex items-center text-gray-500">
-          <hr className="flex-grow border-gray-700" />
+          <hr className="flex-grow " />
           <span className="px-2">or</span>
-          <hr className="flex-grow border-gray-700" />
+          <hr className="flex-grow " />
         </div>
 
         <form onSubmit={handleSubmit} className="space-y-4">
@@ -85,7 +85,7 @@ export default function LoginPage() {
             <input
               id="email"
               type="email"
-              className="w-full px-4 py-2 bg-gray-800 border border-gray-700 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500"
+              className="w-full px-4 py-2  border  rounded-md focus:outline-none focus:ring-2"
               value={email}
               onChange={(e) => setEmail(e.target.value)}
             />
@@ -97,7 +97,7 @@ export default function LoginPage() {
             <input
               id="password"
               type="password"
-              className="w-full px-4 py-2 bg-gray-800 border border-gray-700 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500"
+              className="w-full px-4 py-2 border rounded-md focus:outline-none focus:ring-2 "
               value={password}
               onChange={(e) => setPassword(e.target.value)}
             />
@@ -105,7 +105,7 @@ export default function LoginPage() {
           <button
             type="submit"
             disabled={loading}
-            className="w-full py-2 bg-blue-600 hover:bg-blue-700 rounded-md transition disabled:opacity-50"
+            className="w-full py-2 rounded-md transition disabled:opacity-50"
           >
             {loading ? "Logging in..." : "Log In"}
           </button>
