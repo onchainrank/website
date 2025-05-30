@@ -117,12 +117,12 @@ export default function ProfilePage() {
           )}
         </div>
 
-        {/* Logout */}
+        {/* Dashboard */}
         <button
-          onClick={handleLogout}
+          onClick={() => router.push("/dashboard")}
           className="w-full py-2 mt-2 bg-accent hover:bg-accent-light text-text font-semibold rounded-lg transition"
         >
-          Logout
+          Dashboard
         </button>
       </div>
     </div>
