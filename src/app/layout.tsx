@@ -14,8 +14,16 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "Onchainrank",
+  title: "onchainrank",
   description: "pump.fun tokens onchain analytics",
+  icons: {
+    // default favicon
+    icon: "/favicon.ico",
+    // you can add an apple-touch-icon if you want:
+    apple: "/ocr.png",
+    // you can even add a shortcut icon for Windows tiles:
+    shortcut: "/ocr.png",
+  },
 };
 
 export default function RootLayout({
@@ -28,7 +36,6 @@ export default function RootLayout({
       <body
         className={`${geistSans.variable} ${geistMono.variable} antialiased`}
       >
-        <Navbar />
         {children}
       </body>
     </html>
