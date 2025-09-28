@@ -10,6 +10,11 @@ module.exports = {
           surface: "#e6f9ff", // very light tint for cards/sections
           muted: "#f2fbff", // ultra-subtle for footers/forms
         },
+        "brand-navy": "#11457a",
+        "brand-green": "#00ae7e",
+        "brand-navy-light": "#c8edff",
+        "brand-navy-dark": "#0c3e55",
+        "brand-navy-light2": "80D4FF",
         // (keep the rest of your colors as-is)
         primary: {
           DEFAULT: "#00af7f",
