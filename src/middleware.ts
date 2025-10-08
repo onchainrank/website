@@ -5,7 +5,7 @@ import type { NextRequest } from "next/server";
 
 const MAIN_HOSTS = ["onchainrank.com", "www.onchainrank.com", "localhost"];
 const APP_HOST = "app.onchainrank.com";
-const WHITELIST = ["/", ".", "/profile", "/register", "/login", "/dashboard"];
+const WHITELIST = ["/", ".", "/profile", "/register", "/login", "/dashboard", "/docs", "/roadmap"];
 
 export function middleware(request: NextRequest) {
   const { hostname, pathname, search } = request.nextUrl;

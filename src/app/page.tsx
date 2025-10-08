@@ -2,6 +2,8 @@
 import Image from "next/image";
 import { ArrowRightIcon } from "@heroicons/react/24/solid";
 
+export const dynamic = "force-static";
+
 export default function HomePage() {
   return (
     <div className="bg-black text-white min-h-screen font-sans scroll-smooth">
@@ -14,8 +16,9 @@ export default function HomePage() {
               src="/logo.png"
               alt="Onchainrank Logo"
               width={160}
-              height={30}
+              height={21}
               priority
+              unoptimized
             />
           </div>
           {/* Nav Links */}
@@ -29,6 +32,18 @@ export default function HomePage() {
                 {item}
               </a>
             ))}
+            <a
+              href="/docs"
+              className="text-brand-navy hover:text-black transition"
+            >
+              Docs
+            </a>
+            <a
+              href="/roadmap"
+              className="text-brand-navy hover:text-black transition"
+            >
+              Roadmap
+            </a>
           </div>
         </div>
       </nav>
@@ -53,7 +68,7 @@ export default function HomePage() {
         </p>
         <a
           href="#get-started"
-          className="bg-green-500 text-black px-6 py-3 rounded-2xl font-semibold flex items-center gap-2 hover:bg-green-400 transition"
+          className="bg-brand-green text-black px-6 py-3 rounded-2xl font-semibold flex items-center gap-2 hover:bg-green-400 transition"
         >
           Get Started <ArrowRightIcon className="w-5 h-5" />
         </a>
@@ -80,7 +95,7 @@ export default function HomePage() {
               desc: "We scan pump.fun nonstop to deliver token insights the moment they launch.",
             },
             {
-              title: "Bullx.io Chart Injection",
+              title: "Advanced DEX Chart Plugin",
               desc: "See advanced indicators right inside Bullx.io meme trading pages.",
             },
             {
@@ -114,7 +129,7 @@ export default function HomePage() {
         <div className="grid md:grid-cols-2 gap-10 max-w-5xl mx-auto text-left">
           <div className="bg-black p-6 rounded-2xl shadow-lg">
             <h3 className="text-2xl font-semibold mb-3 text-gray-400">
-              Bullx.io Chart Extension
+              DEX Extension
             </h3>
             <p className="text-gray-400">
               Injects advanced charts with custom indicators directly into Bullx
@@ -124,13 +139,38 @@ export default function HomePage() {
           </div>
           <div className="bg-black p-6 rounded-2xl shadow-lg ">
             <h3 className="text-2xl font-semibold mb-3 text-gray-400">
-              Alert Extension
+              Notifier Extension
             </h3>
             <p className="text-gray-400">
               Get instant alerts when high-value tokens launch on pump.fun.
               Alerts open Bullx with enriched data so you act immediately.
             </p>
           </div>
+        </div>
+        <div className="mt-8 flex justify-center gap-4">
+          <a
+            href="https://github.com/onchainrank"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="bg-brand-green text-black px-6 py-3 rounded-2xl font-semibold flex items-center gap-2 hover:bg-green-400 transition"
+          >
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              width="24"
+              height="24"
+              fill="currentColor"
+              viewBox="0 0 16 16"
+            >
+              <path d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.012 8.012 0 0 0 16 8c0-4.42-3.58-8-8-8z" />
+            </svg>
+            Download
+          </a>
+          <a
+            href="/docs"
+            className="bg-gray-900 text-brand-green px-6 py-3 rounded-2xl font-semibold flex items-center gap-2 hover:bg-gray-800 transition border border-brand-green"
+          >
+            View Docs
+          </a>
         </div>
       </section>
 
@@ -145,7 +185,7 @@ export default function HomePage() {
             },
             {
               q: "How does your product protect me from scams?",
-              a: "We scan on-chain activity for suspicious wallets, low liquidity, or sudden dumps—and warn you before you enter.",
+              a: "We analyze multiple on-chain signals including bot patterns, duplicate/recycled socials, fresh creator wallets, pump & dump indicators, suspicious fee/volume ratios, and holder distribution. Visual warnings appear directly in charts when risk is detected, and our filter system automatically blocks known scam patterns before you see them.",
             },
             {
               q: "Do I need to leave Bullx.io to use your charts?",
@@ -179,14 +219,25 @@ export default function HomePage() {
           Ready to Trade Smarter?
         </h2>
         <p className="text-lg mb-8 text-gray-200">
-          Install our Chrome extensions and start spotting meme coins before the
-          crowd.
+          Contact me on Telegram to get started and learn how to access our
+          tools.
         </p>
         <a
-          href="#"
+          href="https://t.me/onchain_rank"
+          target="_blank"
+          rel="noopener noreferrer"
           className="bg-white text-black px-6 py-3 rounded-2xl font-semibold flex items-center gap-2 mx-auto w-fit hover:bg-gray-200 transition"
         >
-          Install Now <ArrowRightIcon className="w-5 h-5" />
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            width="24"
+            height="24"
+            fill="currentColor"
+            viewBox="0 0 16 16"
+          >
+            <path d="M16 8A8 8 0 1 1 0 8a8 8 0 0 1 16 0zM8.287 5.906c-.778.324-2.334.994-4.666 2.01-.378.15-.577.298-.595.442-.03.243.275.339.69.47l.175.055c.408.133.958.288 1.243.294.26.006.549-.1.868-.32 2.179-1.471 3.304-2.214 3.374-2.23.05-.012.12-.026.166.016.047.041.042.12.037.141-.03.129-1.227 1.241-1.846 1.817-.193.18-.33.307-.358.336a8.154 8.154 0 0 1-.188.186c-.38.366-.664.64.015 1.088.327.216.589.393.85.571.284.194.568.387.936.629.093.06.183.125.27.187.331.236.63.448.997.414.214-.02.435-.22.547-.82.265-1.417.786-4.486.906-5.751a1.426 1.426 0 0 0-.013-.315.337.337 0 0 0-.114-.217.526.526 0 0 0-.31-.093c-.3.005-.763.166-2.984 1.09z" />
+          </svg>
+          Contact
         </a>
       </section>
 

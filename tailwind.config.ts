@@ -27,7 +27,7 @@ module.exports = {
           dark: "#0f3366",
         },
         text: {
-          DEFAULT: "#111827",
+          DEFAULT: "#9ca3af", // gray-400
           secondary: "#4B5563",
           inverse: "#FFFFFF",
         },
